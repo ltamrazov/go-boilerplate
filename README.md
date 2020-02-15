@@ -1,2 +1,2 @@
-# famjam
+# go-boiler plate
 
