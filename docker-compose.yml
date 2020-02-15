@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  api:
+    hostname: app-development
+    restart: unless-stopped
+    build: .
+    volumes:
+      - type: bind
+        source: .
+        target: /famjam
+    ports:
+      - '8080:8080'
+    working_dir: /famjam
+    command: bash -c "go mod download && make serve"
